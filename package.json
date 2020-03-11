@@ -1,0 +1,63 @@
+{
+  "name": "webpaksetup",
+  "version": "1.0.0",
+  "description": "A template developed for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "webpack-dev-server",
+    "dev": "webpack-dev-server --open --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js",
+    "format": "pretty-quick",
+    "lint": "eslint \"**/*.js\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "keywords": [],
+  "author": "Joseph Shanahan",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "@testing-library/react": "^9.5.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.1.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.0",
+    "webpack-bundle-analyzer": "^3.6.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmshanahan/ReactBoilerPlate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jmshanahan/ReactBoilerPlate/issues"
+  },
+  "homepage": "https://github.com/jmshanahan/ReactBoilerPlate#readme"
+}
