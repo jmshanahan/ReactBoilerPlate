@@ -30,12 +30,33 @@ module.exports = {
         test: /\.css/,
         use: ['style-loader', 'css-loader?modules=true'],
         exclude: /node_modules/
+      },
+      {
+        test: /\.(png|jpeg|jpg|gif|woff|woff2)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: { limit: 8192 }
+          }
+        ],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader'
+          }
+        ],
+        exclude: /node_modules/
       }
     ]
   },
+
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      filename: './index.html'
     })
   ]
 }
